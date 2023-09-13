@@ -70,15 +70,8 @@ The implementation employs a `g_malloc_mutex` mutex to ensure thread safety duri
 
 ## Usage
 
-gcc "test${test_number}.c" -L. -lmalloc_x86_64_Linux -o test_program
-
-
-
-## Usage
-
 - Compile the library
-- Copy the .so file into your .c folder
-- Copy the header (includes folder) into your .c folder
+- Copy the .so file and includes folder into your .c folder
 - Export environnement variable to override the standard malloc functions with :
 ````
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
