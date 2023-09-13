@@ -1,0 +1,24 @@
+TINY : 0x7fbc2e03a000
+LARGE : 0x7fbc2e038000
+=== Testing malloc ===
+String after malloc and strcpy: Hello World
+=== Testing realloc with increased size ===
+Before realloc: Hello
+After realloc and strcat: Hello World, expanded string!
+=== Testing realloc with decreased size ===
+Before realloc: Hello World, with some additional unnecessary charllo World, expanded string!
+After realloc: Hello World,
+=== Testing free ===
+Before free: Hello World
+After free (expected garbage or a crash): Hello World
+=== Testing show_alloc_mem ===
+0x7fbc2e03a030 - 0x7fbc2e03a068 : 56 bytes
+0x7fbc2e03a088 - 0x7fbc2e03a098 : 16 bytes
+0x7fbc2e03a0b8 - 0x7fbc2e03a0d0 : 24 bytes
+0x7fbc2e03a0f0 - 0x7fbc2e03a110 : 32 bytes
+0x7fbc2e038030 - 0x7fbc2e039030 : 4096 bytes
+Total : 4224 bytes
+=== Testing malloc with different sizes ===
+TINY allocation successful!
+SMALL allocation successful!
+LARGE allocation successful!
